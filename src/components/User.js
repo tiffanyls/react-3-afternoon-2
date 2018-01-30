@@ -14,7 +14,7 @@ class User extends Component{
         }
     }
 
-    componentWillMount () {
+    componentDidlMount () {
         axios.get (`/api/user/${this.props.match.params.id}`).then (response => this.state = response.data)
         axios.get(`/api/blogs/${this.props.match.params.id}`).then (response => this.state = response.data)
     }
